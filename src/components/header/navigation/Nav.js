@@ -14,9 +14,10 @@ import {
 const useStyles = makeStyles((theme) => ({
   accountButton: {
     marginRight: theme.spacing(2),
+    color:'#fff',
 
     '&:hover': {
-      background: 'red',
+      background: '#007ec1',
     },
   },
   nav: {
