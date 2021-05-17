@@ -3,8 +3,9 @@ import Nav from './navigation/Nav';
 
 function Header() {
     return (
-        <div>
+        <div className="container">
             <Nav />
+            <video src=""/>
         </div>
     )
 }
