@@ -11,8 +11,8 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     background: 'gray',
-    [theme.breakpoints.down('sm')]:{
-      backgroundColor: 'red',
+    [theme.breakpoints.down('xm')]:{
+      backgroundColor: 'yellow',
     },
   },
   
@@ -24,6 +24,8 @@ const useStyles = makeStyles((theme) => ({
   buttonstart: {
     color: '#ffff',
     background: 'transparent',
+    width:'231px',
+
   },
 }));
 
