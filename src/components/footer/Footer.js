@@ -1,39 +1,83 @@
-import { Container, Grid, Box, Link } from '@material-ui/core';
+import {
+  Container,
+  Grid,
+  Box,
+  Link,
+  TextField,
+  Button,
+  makeStyles,
+} from '@material-ui/core';
 
 import React from 'react';
 
+
+const useStyles = makeStyles((theme) => ({
+    input:{
+        margin: theme.spacing(2),
+    }
+}))
+
+
 function Footer() {
+    const classes = useStyles();
   return (
     <footer>
-      <Box px={{xs:3,sm:10}} py={{xs:5, sm:10}} bgcolor="green" color="white">
+      <Box
+        px={{ xs: 3, sm: 10 }}
+        py={{ xs: 5, sm: 10 }}
+        bgcolor="#242729"
+        color="white"
+      >
         <Container maxWidth="lg">
           <Grid container spacing={5}>
+            <Grid item xs={12} sm={12}>
+              <Box textAlign="center">
+                Join the Adventure newsletter to receive our best vacation deals
+              </Box>
+              <Box textAlign="center" p={2}>
+                You Can unsubscribe at any time.
+              </Box>
+              <Box textAlign="center" class={classes.input}>
+                <TextField
+                  id="outlined-size-normal"
+                  defaultValue="Your Email"
+                  variant="outlined"
+                  size="small"
+                />
+                <Button variant="contained" color="secondary" marginLeft='20px'>
+                  Subscribe
+                </Button>
+              </Box>
+            </Grid>
             <Grid item xs={12} sm={3}>
-              <Box borderBottom={1}>help</Box>
+              <Box borderBottom={1} fontSize="22px">
+                About us
+              </Box>
               <Box>
                 <Link href="/" color="inherit">
-                  Contact
+                  How it works
                 </Link>
               </Box>
               <Box>
                 <Link href="/" color="inherit">
-                  Contact
+                  Testimonials
                 </Link>
               </Box>
               <Box>
                 <Link href="/" color="inherit">
-                  Contact
+                  Careers
+                </Link>
+              </Box>
+              <Box>
+                <Link href="/" color="inherit">
+                  Investors
                 </Link>
               </Box>
             </Grid>
 
-
             <Grid item xs={12} sm={3}>
-              <Box borderBottom={1}>help</Box>
-              <Box>
-                <Link href="/" color="inherit">
-                  Contact
-                </Link>
+              <Box borderBottom={1} fontSize="22px">
+                Contact Us
               </Box>
               <Box>
                 <Link href="/" color="inherit">
@@ -42,54 +86,76 @@ function Footer() {
               </Box>
               <Box>
                 <Link href="/" color="inherit">
-                  Contact
+                  Support
+                </Link>
+              </Box>
+              <Box>
+                <Link href="/" color="inherit">
+                  Destinations
+                </Link>
+              </Box>
+              <Box>
+                <Link href="/" color="inherit">
+                  Sponsorships
                 </Link>
               </Box>
             </Grid>
 
-
-
             <Grid item xs={12} sm={3}>
-              <Box borderBottom={1}>help</Box>
+              <Box borderBottom={1} fontSize="22px">
+                Videos
+              </Box>
               <Box>
                 <Link href="/" color="inherit">
-                  Contact
+                  Submit Video
                 </Link>
               </Box>
               <Box>
                 <Link href="/" color="inherit">
-                  Contact
+                  Ambassadors
                 </Link>
               </Box>
               <Box>
                 <Link href="/" color="inherit">
-                  Contact
+                  Agency
+                </Link>
+              </Box>
+              <Box>
+                <Link href="/" color="inherit">
+                  Influencer
                 </Link>
               </Box>
             </Grid>
 
-
-
             <Grid item xs={12} sm={3}>
-              <Box borderBottom={1}>help</Box>
+              <Box borderBottom={1} fontSize="22px">
+                Social Media
+              </Box>
               <Box>
                 <Link href="/" color="inherit">
-                  Contact
+                  Instagram
                 </Link>
               </Box>
               <Box>
                 <Link href="/" color="inherit">
-                  Contact
+                  Facebook
                 </Link>
               </Box>
               <Box>
                 <Link href="/" color="inherit">
-                  Contact
+                  Youtube
+                </Link>
+              </Box>
+              <Box>
+                <Link href="/" color="inherit">
+                  Twitter
                 </Link>
               </Box>
             </Grid>
           </Grid>
-          <Box textAlign="center" pt={{xs:5,sm:10}} pb={{xs:5,sm:0}}>ddddd</Box>
+          <Box textAlign="center" pt={{ xs: 5, sm: 10 }} pb={{ xs: 5, sm: 0 }}>
+            ddddd
+          </Box>
         </Container>
       </Box>
     </footer>
