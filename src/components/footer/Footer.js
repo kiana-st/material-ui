@@ -16,7 +16,12 @@ const useStyles = makeStyles((theme) => ({
   },
   btn:{
     marginLeft:'20px',
-  }
+  },
+  title:{
+    [theme.breakpoints.down('sm')]: {
+      fontSize:'15px',
+  },
+  },
 }));
 
 function Footer() {
@@ -53,7 +58,7 @@ function Footer() {
               </Box>
             </Grid>
             <Grid item xs={12} sm={3}>
-              <Box borderBottom={1} fontSize="22px">
+              <Box borderBottom={1} fontSize="22px" className={classes.title}>
                 About us
               </Box>
               <Box>
@@ -79,7 +84,7 @@ function Footer() {
             </Grid>
 
             <Grid item xs={12} sm={3}>
-              <Box borderBottom={1} fontSize="22px">
+              <Box borderBottom={1} fontSize="22px"  className={classes.title}>
                 Contact Us
               </Box>
               <Box>
@@ -105,7 +110,7 @@ function Footer() {
             </Grid>
 
             <Grid item xs={12} sm={3}>
-              <Box borderBottom={1} fontSize="22px">
+              <Box borderBottom={1} fontSize="22px" className={classes.title}>
                 Videos
               </Box>
               <Box>
@@ -131,7 +136,7 @@ function Footer() {
             </Grid>
 
             <Grid item xs={12} sm={3}>
-              <Box borderBottom={1} fontSize="22px">
+              <Box borderBottom={1} fontSize="22px" className={classes.title}>
                 Social Media
               </Box>
               <Box>
