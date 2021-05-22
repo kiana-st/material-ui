@@ -38,12 +38,14 @@ const useStyles = makeStyles((theme)=>({
   pic: {
     maxWidth: 300,
     margin: '20px',
-  //   [theme.breakpoints.down('sm')]: {
-  //     maxWidth:300,
-  // },
+   
   },
   pic2: {
     height: 200,
+    [theme.breakpoints.down('sm')]: {
+      maxWidth:300,
+      height:300,
+  },
   },
 }));
 function Main() {
@@ -57,8 +59,8 @@ function Main() {
       <Box>
         <Container maxWidth="lg">
           <Grid container direction="row" justify="center" alignItems="center">
-            <Grid item>
-              <Card className={classes.root} xl={6} >
+            <Grid item  xl={6} md={6}>
+              <Card className={classes.root} >
                 <CardActionArea>
                   <CardMedia
                     className={classes.media}
@@ -80,7 +82,7 @@ function Main() {
               </Card>
             </Grid>
 
-            <Grid item xl={6} >
+            <Grid item xl={6} md={6}>
               <Card className={classes.root}>
                 <CardActionArea>
                   <CardMedia
@@ -102,7 +104,7 @@ function Main() {
               </Card>
             </Grid>
 
-            <Grid item xl={4}>
+            <Grid item xl={4} md={4}>
               <Card className={classes.pic}>
                 <CardActionArea>
                   <CardMedia
@@ -124,7 +126,7 @@ function Main() {
               </Card>
             </Grid>
 
-            <Grid item xl={4}>
+            <Grid item xl={4} md={4}>
               <Card className={classes.pic}>
                 <CardActionArea>
                   <CardMedia
@@ -146,7 +148,7 @@ function Main() {
               </Card>
             </Grid>
 
-            <Grid item xl={4}>
+            <Grid item xl={4} md={4}>
               <Card className={classes.pic}>
                 <CardActionArea>
                   <CardMedia
