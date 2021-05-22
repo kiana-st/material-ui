@@ -10,16 +10,17 @@ import {
 
 import React from 'react';
 
-
 const useStyles = makeStyles((theme) => ({
-    input:{
-        margin: theme.spacing(2),
-    }
-}))
-
+  input: {
+    textAligne: 'center',
+  },
+  btn:{
+    marginLeft:'20px',
+  }
+}));
 
 function Footer() {
-    const classes = useStyles();
+  const classes = useStyles();
   return (
     <footer>
       <Box
@@ -37,14 +38,16 @@ function Footer() {
               <Box textAlign="center" p={2}>
                 You Can unsubscribe at any time.
               </Box>
-              <Box textAlign="center" class={classes.input}>
+              <Box textAlign="center" className={classes.input}>
                 <TextField
                   id="outlined-size-normal"
                   defaultValue="Your Email"
                   variant="outlined"
                   size="small"
+                  marginLeft= '20px'
+
                 />
-                <Button variant="contained" color="secondary" marginLeft='20px'>
+                <Button variant="contained" color="secondary" className={classes.btn}>
                   Subscribe
                 </Button>
               </Box>
@@ -154,7 +157,16 @@ function Footer() {
             </Grid>
           </Grid>
           <Box textAlign="center" pt={{ xs: 5, sm: 10 }} pb={{ xs: 5, sm: 0 }}>
-            ddddd
+            <Grid
+              container
+              direction="row"
+              justify="space-around"
+              alignItems="center"
+            >
+              <Box>TRVL</Box>
+              <Box>TRVL &copy; 2020</Box>
+              <Box>TRVL</Box>
+            </Grid>
           </Box>
         </Container>
       </Box>

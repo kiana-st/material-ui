@@ -9,6 +9,7 @@ import {
   Grid,
   Box,
   Container,
+  
 } from '@material-ui/core';
 import logo from '../pictures/eiffel.jpg';
 import tree from '../pictures/tree.jpg';
@@ -16,15 +17,17 @@ import leaf from '../pictures/leaf.jpg';
 import jungle from '../pictures/jungle.jpg';
 import paysage from '../pictures/paysage.jpg';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme)=>({
   text: {
     width: '100%',
-
     textAlign: 'center',
   },
   root: {
     maxWidth: 500,
     margin: '20px',
+    [theme.breakpoints.down('sm')]: {
+      maxWidth:300,
+  },
   },
   media: {
     height: 300,
@@ -35,11 +38,14 @@ const useStyles = makeStyles({
   pic: {
     maxWidth: 300,
     margin: '20px',
+  //   [theme.breakpoints.down('sm')]: {
+  //     maxWidth:300,
+  // },
   },
   pic2: {
     height: 200,
   },
-});
+}));
 function Main() {
   const classes = useStyles();
   // my comment
@@ -52,7 +58,7 @@ function Main() {
         <Container maxWidth="lg">
           <Grid container direction="row" justify="center" alignItems="center">
             <Grid item>
-              <Card className={classes.root} xl={6}>
+              <Card className={classes.root} xl={6} >
                 <CardActionArea>
                   <CardMedia
                     className={classes.media}
@@ -74,7 +80,7 @@ function Main() {
               </Card>
             </Grid>
 
-            <Grid item xl={6}>
+            <Grid item xl={6} >
               <Card className={classes.root}>
                 <CardActionArea>
                   <CardMedia
